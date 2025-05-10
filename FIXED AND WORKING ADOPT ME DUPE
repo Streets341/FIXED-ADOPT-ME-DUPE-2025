@@ -1,0 +1,2 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PlsNoNoob/-/refs/heads/main/Spawn.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Streets341/ADOPT-ME-DUPE-NEW/refs/heads/main/adopt%20me%20dupe", true))()
